@@ -22,7 +22,7 @@ const getDirectoryData = (basePath, lang) => {
 
 export default function handler(req, res) {
   const { lang = 'en' } = req.query;
-  const allowedLangs = ['en', 'es', 'fr', 'de']; // Add other allowed languages as needed
+  const allowedLangs = ['en', 'es', 'fr', 'de', 'ca', 'fi', 'it', 'jp', 'kr', 'pt', 'ru', 'tr', 'zh'];
   if (!allowedLangs.includes(lang)) {
     res.status(400).json({ error: 'Invalid language parameter' });
     return;
